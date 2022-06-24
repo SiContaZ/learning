@@ -9,7 +9,17 @@ Console.WriteLine("Введите число");
 string numberStr = Console.ReadLine();
 int numberN = int.Parse(numberStr);
 
-for (int i = 2; i <= numberN; i += 2)
+if (numberN > 0)
 {
-    Console.WriteLine(i);
+    for (int i = 2; i <= numberN; i += 2)
+    {
+        Console.WriteLine(i);
+    }
+}
+else
+{
+    for (int i = 0; i >= numberN; i -= 2)
+    {
+        Console.WriteLine(i);
+    }
 }
