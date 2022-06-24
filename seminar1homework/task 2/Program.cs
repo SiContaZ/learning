@@ -19,25 +19,32 @@ Console.WriteLine("Введите третье число");
 string thirdStr = Console.ReadLine();
 int third = int.Parse(thirdStr);
 
-if (first > second)
+if (first == second && first == third)
 {
-    if (first > third)
-    {
-        Console.WriteLine($"максимальное число - {first}");
-    }
-    else
-    {
-        Console.WriteLine($"максимальное число - {third}");
-    }
+    Console.WriteLine("числа равны");
 }
 else
 {
-    if (second > third)
+    if (first > second)
     {
-        Console.WriteLine($"максимальное число - {second}");
+        if (first > third)
+        {
+            Console.WriteLine($"максимальное число - {first}");
+        }
+        else
+        {
+            Console.WriteLine($"максимальное число - {third}");
+        }
     }
     else
     {
-        Console.WriteLine($"максимальное число - {third}");
+        if (second > third)
+        {
+            Console.WriteLine($"максимальное число - {second}");
+        }
+        else
+        {
+            Console.WriteLine($"максимальное число - {third}");
+        }
     }
 }
