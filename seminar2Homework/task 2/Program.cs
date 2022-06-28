@@ -17,5 +17,5 @@ if (numberStr.Length >= 3)
 }
 else
 {
-    Console.WriteLine("третей цифры нет");
+    Console.WriteLine("третьей цифры нет");
 }
