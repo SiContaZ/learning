@@ -10,9 +10,7 @@
 
 Console.WriteLine("Введите число");
 string numberStr = Console.ReadLine();
-//int number = int.Parse(numberStr);
 
-//if (number > 99)
 if (numberStr.Length >= 3)
 {
     Console.WriteLine($"третья цифра - {numberStr[2]}");
