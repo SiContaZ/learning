@@ -29,7 +29,7 @@ int GetNumber(string message)
     return result;
 }
 
-void SummInt(int number)
+void Summ(int number)
 {
     int summ = 0;
     if(number == 0)
@@ -49,4 +49,4 @@ void SummInt(int number)
 int number = GetNumber("Введите число");
 
 
-SummInt(number);
+Summ(number);
