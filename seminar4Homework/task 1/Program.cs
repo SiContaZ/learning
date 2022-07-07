@@ -46,8 +46,12 @@ void GetExpPow(int number, int degree)
     Console.WriteLine(Math.Pow(number,degree));
 }
 
+
+
+
 int number = GetNumber("введите число");
-int degree = GetNumber("Введите второе число");
+int degree = GetNumber("Введите степень числа");
+
 GetExp(number, degree);
 
 GetExpPow(number, degree);
