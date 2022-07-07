@@ -28,23 +28,7 @@ int GetNumber(string message)
 
     return result;
 }
-//метод через массив
-void SummArray(int number)
-{
-    string numberStr = Convert.ToString(number);
-    int[] array = new int[numberStr.Length];
 
-    int summ = 0;
-    for (int i = 0; i < array.Length; i++)
-        array[i] = numberStr[i] - '0';
-
-    for (int j = 0; j < array.Length; j++)
-        summ = summ + array[j];
-
-    Console.WriteLine(summ);
-}
-
-// метод через int
 void SummInt(int number)
 {
     int summ = 0;
@@ -64,6 +48,5 @@ void SummInt(int number)
 
 int number = GetNumber("Введите число");
 
-SummArray(number);
 
 SummInt(number);

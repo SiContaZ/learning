@@ -7,24 +7,10 @@
 6, 1, 33 -> [6, 1, 33]
 */
 
-//рандомный массив
 
-Random rnd = new Random();
-int[] array = new int[8];
-
-
-
-for(int i = 0; i < array.Length; i++)
-{
-    array[i] = rnd.Next();
-}
-for(int i = 0; i < array.Length; i++)
-{
-    Console.Write($"{array[i]} ");
-}
 // массив из заданного восьмизначного числа
 
-int GetNumber(string message)
+/*int GetNumber(string message)
 {
     int result = 0;
     string errorMessage = "Вы ввели не число. Введите корректное число.";
@@ -58,3 +44,50 @@ int GetNumber(string message)
 
     return result;
 }
+void ArrayNumber(int number)
+{
+    while(number>0)
+    {
+        Console.Write(number%10 );
+        number/=10;
+    }
+}
+
+int number = GetNumber("Введите восьмизначное число");
+int [] array = new 
+ArrayNumber(number);
+*/
+void PrintArray(int[] array)
+{
+    for(int i = 0; i< array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+}
+
+void PrintArrayForEach(int[] array)
+{
+    foreach(int item in array)
+    {
+        //int item = array[i], в цикле по i 
+
+        Console.Write($"{item} ");
+    }
+}
+
+
+var array = new int[8];
+Random rnd = new Random();
+
+for(int i=0; i < array.Length; i++)
+{
+    array[i] = rnd.Next(1,10);
+}
+
+Console.WriteLine("Вывод через цикл for: ");
+PrintArray(array);
+Console.WriteLine();
+
+
+Console.WriteLine("Вывод через цикл foreach: ");
+PrintArrayForEach(array);
