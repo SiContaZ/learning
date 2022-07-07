@@ -7,38 +7,17 @@
 6, 1, 33 -> [6, 1, 33]
 */
 
-//ручной ввод массива
 
-int GetNumber(string message)
+Random rnd = new Random();
+int[] array = new int[8];
+
+
+
+for(int i = 0; i < array.Length; i++)
 {
-    int result = 0;
-    Console.WriteLine(message);
-    while(true)
-    {
-        if(int.TryParse(Console.ReadLine(), out result))
-        {
-            break;
-        }
-        else
-        {
-            Console.Clear();
-            Console.WriteLine("Вы ввели не число. Введите корректное число");
-        }
-    }
-
-    return result;
+    array[i] = rnd.Next(0,20);
 }
-void FillArray(int[] array)
+for(int i = 0; i < array.Length; i++)
 {
-    for (int i = 0; i < array.Length ; i++)
-    {
-        array[i] = GetNumber("Введите число");
-    }
-    for (int j = 0; j < array.Length; j++)
-    {
-        Console.Write($"{array[j]} ");
-    }
+    Console.Write($"{array[i]} ");
 }
-int [] array = new int[8];
-
-FillArray(array);
