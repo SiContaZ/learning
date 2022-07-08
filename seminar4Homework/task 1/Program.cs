@@ -27,6 +27,16 @@ int GetNumber(string message)
     return result;
 }
 
+void GetExp(int number, int degree)
+{
+    int temp = number;
+    for (int i = 1; i < degree; i++)
+    {
+        number *= temp;
+    }
+    Console.WriteLine(number);
+}
+
 
 
 void GetExpPow(int number, int degree)
@@ -39,5 +49,9 @@ void GetExpPow(int number, int degree)
 
 int number = GetNumber("введите число");
 int degree = GetNumber("Введите степень числа");
-
+Console.WriteLine();
+Console.WriteLine("Возведение в степень через математическую функцию");
 GetExpPow(number, degree);
+Console.WriteLine();
+Console.WriteLine("Возведение в степень через цикл");
+GetExp(number, degree);
