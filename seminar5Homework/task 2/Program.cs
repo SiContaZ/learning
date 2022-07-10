@@ -40,7 +40,7 @@ void PrintSumm(int[] array)
 
 Console.WriteLine("Введите размерность массива");
 int dimension = int.Parse(Console.ReadLine());
-
+Console.WriteLine();
 int[] array = GetArray(dimension);
 PrintArray(array);
 Console.WriteLine();
