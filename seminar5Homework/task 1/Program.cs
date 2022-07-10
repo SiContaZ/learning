@@ -41,10 +41,8 @@ int EvenNumbers(int[] array)
 
 Console.WriteLine("Введите размерность массива");
 int dimension = int.Parse(Console.ReadLine());
-
-int[] array = GetArray(dimension);
-
 Console.WriteLine();
+int[] array = GetArray(dimension);
 int evenNumbers = EvenNumbers(array);
 PrintArray(array);
 Console.WriteLine();
