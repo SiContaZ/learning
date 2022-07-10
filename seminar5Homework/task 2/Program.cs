@@ -28,6 +28,7 @@ void PrintArray(int[] arr)
     }
 }
 
+//судя по примерам нужно выдать сумму чисел под нечётными индесами.
 void PrintSumm(int[] array)
 {
     int summ = 0;
