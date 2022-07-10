@@ -26,7 +26,7 @@ void PrintArray(int[] arr)
     }
 }
 
-int PositiveNumbers(int[] array)
+int EvenNumbers(int[] array)
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++)
@@ -45,7 +45,7 @@ int dimension = int.Parse(Console.ReadLine());
 int[] array = GetArray(dimension);
 
 Console.WriteLine();
-int positiveNumbers = PositiveNumbers(array);
+int evenNumbers = EvenNumbers(array);
 PrintArray(array);
 Console.WriteLine();
-Console.WriteLine($"В массиве {positiveNumbers} чётных чисел.");
+Console.WriteLine($"В массиве {evenNumbers} чётных чисел.");
