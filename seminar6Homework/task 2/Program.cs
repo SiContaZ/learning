@@ -25,6 +25,7 @@ int GetNumber(string message)
 
     return result;
 }
+// Представляем уравнения в системе. Из неё находим х = (b2-b1)/(k1-k2)
 
 void CrossPoint(double b1,double k1,double b2,double k2)
 {
