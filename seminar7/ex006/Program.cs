@@ -38,7 +38,7 @@ int [,] IntegMatrix(int[,] matrix, int[,] matrix2)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int x = 0; x < matrix.GetLength(0); x++)
+            for (int x = 0; x < matrix.GetLength(1); x++)
             {
                 integMatrix[i,j] += matrix[i,x] * matrix2[x,j];
             }
