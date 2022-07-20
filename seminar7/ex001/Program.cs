@@ -31,7 +31,7 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
-}   
+}
 
 Console.WriteLine("Введите число m:");
 int m = int.Parse(Console.ReadLine());
