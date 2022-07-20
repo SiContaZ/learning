@@ -31,7 +31,7 @@ void PrintMatrix(int[,] matrix)
 
 int [,] IntegMatrix(int[,] matrix, int[,] matrix2)
 {
-    int [,] integMatrix = new int[matrix.GetLength(0),matrix.GetLength(1)];
+    int [,] integMatrix = new int[matrix.GetLength(0),matrix2.GetLength(1)];
     
 
     for (int i = 0; i < matrix.GetLength(0); i++)
