@@ -10,22 +10,22 @@
 45(1,0,0) 53(1,0,1)
 */
 
-int [,,] InitMatrix(int m, int n, int k)
+int[,,] InitMatrix(int m, int n, int k)
 {
-    int [,,] matrix = new int[m,n,k];
-    int [] buffer = new int[m*n*k];
+    int[,,] matrix = new int[m, n, k];
+    int[] buffer = new int[m * n * k];
     int count = 0;
     Random randomizer = new Random();
     for (int i = 0; i < buffer.Length; i++)
     {
-        buffer[i] = randomizer.Next(1,101);
-        if(i>=1)
+        buffer[i] = randomizer.Next(1, 101);
+        if (i >= 1)
         {
             for (int j = 0; j < i; j++)
             {
                 while (buffer[i] == buffer[j])
                 {
-                    buffer[i] = randomizer.Next(1,101);
+                    buffer[i] = randomizer.Next(1, 101);
                     j = 0;
                 }
             }
@@ -37,7 +37,7 @@ int [,,] InitMatrix(int m, int n, int k)
         {
             for (int l = 0; l < matrix.GetLength(2); l++)
             {
-                matrix[i,j,l] = buffer[count];
+                matrix[i, j, l] = buffer[count];
                 count++;
             }
         }
@@ -53,7 +53,7 @@ void PrintMatrix(int[,,] matrix)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
-                Console.Write($"{matrix[i,j,k]} ({i}, {j}, {k});   ");
+                Console.Write($"{matrix[i, j, k]} ({i}, {j}, {k});   ");
             }
             Console.WriteLine();
         }
@@ -66,7 +66,7 @@ Random rnd = new Random();
 int x = rnd.Next(1, 5);
 int y = rnd.Next(1, 5);
 int z = rnd.Next(1, 5);
-int[,,] matrix3D = InitMatrix(x,y,z);
+int[,,] matrix3D = InitMatrix(x, y, z);
 Console.WriteLine($"В матрице {x} строки,{y} столбца,{z} слоя.");
 Console.WriteLine();
 PrintMatrix(matrix3D);
