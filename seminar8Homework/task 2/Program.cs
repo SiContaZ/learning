@@ -50,7 +50,7 @@ void MinMatrixSumLine(int[,] matrix)
     int minMatrixSumLine = 0;
     for (int i = 0; i < matrix.GetLength(1); i++)
     {
-        matrixSumLine += matrix[0,i];
+        matrixSumLine += matrix[0, i];
     }
     buffer = matrixSumLine;
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -58,15 +58,15 @@ void MinMatrixSumLine(int[,] matrix)
         matrixSumLine = 0;
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrixSumLine +=matrix[i,j];
+            matrixSumLine += matrix[i, j];
         }
-        if (matrixSumLine<buffer)
+        if (matrixSumLine < buffer)
         {
             minMatrixSumLine = i;
             buffer = matrixSumLine;
         }
     }
-    Console.WriteLine($"Строка с минимальной суммой элементов - {minMatrixSumLine+1}");
+    Console.WriteLine($"Строка с минимальной суммой элементов - {minMatrixSumLine + 1}");
 }
 
 
