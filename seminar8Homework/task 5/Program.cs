@@ -13,25 +13,25 @@
 10  9  8 7
 */
 
-int [,] InitMatrix(int m)
+int[,] InitMatrix(int m)
 {
-    int [,] matrix = new int[m,m];
+    int[,] matrix = new int[m, m];
     int buffer = 1;
     int i = 0;
     int j = 0;
-    while(buffer<=matrix.GetLength(0)*matrix.GetLength(1))
+    while (buffer <= matrix.GetLength(0) * matrix.GetLength(1))
     {
-        matrix[i,j] = buffer;
+        matrix[i, j] = buffer;
         buffer++;
-        if(i<=j+1&&i+j<matrix.GetLength(1)-1)
+        if (i <= j + 1 && i + j < matrix.GetLength(1) - 1)
         {
             j++;
         }
-        else if(i<j&&i+j>=matrix.GetLength(0)-1)
+        else if (i < j && i + j >= matrix.GetLength(0) - 1)
         {
             i++;
         }
-        else if(i>=j&&i+j>matrix.GetLength(1)-1)
+        else if (i >= j && i + j > matrix.GetLength(1) - 1)
         {
             j--;
         }
