@@ -33,6 +33,7 @@
 
 10 6 24 49
 */
+
 /*
 В Примере ошибка: произведение этих матриц будет равоно
 70	61	46	69
@@ -40,16 +41,16 @@
 46	92	100	88
 69	76	88	114
 */
-int [,] InitMatrix(int m, int n)
+int[,] InitMatrix(int m, int n)
 {
-    int [,] matrix = new int[m,n];
+    int[,] matrix = new int[m, n];
     Random randomizer = new Random();
 
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            matrix[i,j] = randomizer.Next(1,10);
+            matrix[i, j] = randomizer.Next(1, 10);
         }
     }
     return matrix;
@@ -67,10 +68,10 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int [,] IntegMatrix(int[,] matrix, int[,] matrix2)
+int[,] IntegMatrix(int[,] matrix, int[,] matrix2)
 {
-    int [,] integMatrix = new int[matrix.GetLength(0),matrix2.GetLength(1)];
-    
+    int[,] integMatrix = new int[matrix.GetLength(0), matrix2.GetLength(1)];
+
 
     for (int i = 0; i < integMatrix.GetLength(0); i++)
     {
@@ -78,7 +79,7 @@ int [,] IntegMatrix(int[,] matrix, int[,] matrix2)
         {
             for (int k = 0; k < matrix.GetLength(1); k++)
             {
-                integMatrix[i,j] += matrix[i,k] * matrix2[k,j];
+                integMatrix[i, j] += matrix[i, k] * matrix2[k, j];
             }
         }
     }
