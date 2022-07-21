@@ -56,7 +56,6 @@ void SortMatrix(int[,] matrix)
         {
             for (int k = 0; k < matrix.GetLength(1) - 1; k++)
             {
-                matrix[i, k] = matrix[i, k];
                 if (matrix[i, k] > matrix[i, k + 1])
                 {
                     buffer = matrix[i, k + 1];
