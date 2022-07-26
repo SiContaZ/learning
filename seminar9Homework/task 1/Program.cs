@@ -15,6 +15,6 @@ string recursion(int n, int m)
         return recursion(n - 1, m) + ", " + n;
 }
 
-int n = 12;
-int m = 6;
+int n = int.Parse(Console.ReadLine());
+int m = int.Parse(Console.ReadLine());
 Console.WriteLine($"{recursion(n, m)}");
